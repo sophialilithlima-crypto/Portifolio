@@ -1,0 +1,170 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { bio, profile, projects, skills } from "../../domain/profile";
+---
+
+<Layout lang="pt">
+  <div class="grid-bg">
+    <section class="container-page flex min-h-screen items-center pt-28 pb-20">
+      <div class="grid w-full gap-12 lg:grid-cols-[1.25fr_.75fr] lg:items-center">
+        <div class="reveal">
+          <span class="pill inline-flex px-4 py-2 text-xs uppercase tracking-[.22em] text-violet-200">
+            {profile.role}
+          </span>
+
+          <h1 class="mt-7 text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+            Olá, eu sou <span class="text-gradient">Sophia Lilith.</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+            Estudante do ensino médio, explorando a programação e construindo meus primeiros projetos com foco em aprendizado, prática e evolução.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-violet-100">
+              Ver projetos
+            </a>
+            <a href="#contact" class="pill px-5 py-3 text-sm text-zinc-200 transition hover:bg-white/10">
+              Entre em contato
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-3 text-sm text-zinc-500">
+            <span>15 anos</span>
+            <span>•</span>
+            <span>Ensino médio</span>
+            <span>•</span>
+            <span>Interesse em jogos</span>
+          </div>
+        </div>
+
+        <div class="reveal mx-auto w-full max-w-sm lg:ml-auto" style="animation-delay:120ms">
+          <div class="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-violet-950/20">
+            <img src={`${import.meta.env.BASE_URL}images/sophia.jpg`} alt="Foto de Sophia Lilith" class="aspect-[4/5] w-full rounded-[26px] object-cover object-center" />
+            <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
+              <p class="text-xs uppercase tracking-[.2em] text-violet-300">Objetivo</p>
+              <p class="mt-1 text-sm text-white">Continuar aprendendo e desenvolver minha carreira na programação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="about" class="container-page py-24">
+    <div class="grid gap-12 lg:grid-cols-[.65fr_1.35fr]">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">01 — Sobre mim</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight">Conhecendo minha trajetória.</h2>
+      </div>
+      <div class="space-y-5 text-lg leading-8 text-zinc-400">
+        <p>{bio}</p>
+        <p>
+          Meu objetivo é construir uma base sólida, experimentar diferentes tecnologias e transformar cada projeto em uma nova oportunidade de aprendizado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="border-y border-white/6 bg-white/[.018] py-24">
+    <div class="container-page">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">02 — Tecnologias</p>
+      <h2 class="mt-3 text-3xl font-semibold tracking-tight">Ferramentas e conhecimentos.</h2>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {Object.entries(skills).map(([group, items]) => (
+          <div class="card p-6">
+            <h3 class="font-semibold text-white">{group}</h3>
+            <div class="mt-5 flex flex-wrap gap-2">
+              {items.map((item) => (
+                <span class="pill px-3 py-2 text-sm text-zinc-300">{item}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container-page py-24">
+    <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">03 — Projetos</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight">Meus primeiros projetos.</h2>
+      </div>
+      <p class="max-w-md text-sm leading-6 text-zinc-500">
+        Projetos desenvolvidos durante meus estudos para praticar tecnologias, entender novas ferramentas e ganhar experiência.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-2">
+      {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </section>
+
+  <section class="border-y border-white/6 bg-white/[.018] py-24">
+    <div class="container-page grid gap-10 lg:grid-cols-2">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">04 — Objetivo</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight">Evoluir com cada etapa.</h2>
+      </div>
+      <div class="card p-7">
+        <p class="text-lg leading-8 text-zinc-300">
+          Quero continuar estudando programação, conhecer novas tecnologias e desenvolver projetos que me permitam ampliar minha experiência. Tenho interesse especial pela área de jogos e pretendo construir minha carreira buscando cada vez mais conhecimento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-page py-24">
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="card p-7">
+        <p class="text-xs uppercase tracking-[.2em] text-violet-300">Idiomas</p>
+        <div class="mt-5 space-y-4">
+          <div class="flex items-center justify-between border-b border-white/8 pb-4">
+            <span class="text-zinc-200">Português</span>
+            <span class="text-sm text-zinc-500">Nativo</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-zinc-200">Inglês</span>
+            <span class="text-sm text-zinc-500">Intermediário</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-7">
+        <p class="text-xs uppercase tracking-[.2em] text-violet-300">Formação</p>
+        <h3 class="mt-5 text-xl font-semibold">Ensino médio</h3>
+        <p class="mt-2 leading-7 text-zinc-500">
+          Atualmente estudante do ensino médio e em processo de formação na área de programação por meio de estudos e projetos práticos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container-page pb-24">
+    <div class="card overflow-hidden p-8 sm:p-12">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">05 — Contato</p>
+      <div class="mt-4 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div>
+          <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Vamos conversar.</h2>
+          <p class="mt-4 max-w-xl leading-7 text-zinc-400">
+            Para entrar em contato, você pode enviar um e-mail ou acessar meu GitHub e Instagram.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a href={`mailto:${profile.email}`} class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">E-mail</a>
+          <a href={profile.github} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">GitHub</a>
+          <a href={profile.instagram} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="flex flex-col gap-3 py-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
+      <span>© {profile.year} {profile.name}</span>
+      <a href={`${import.meta.env.BASE_URL}pt/cv`} class="hover:text-zinc-300">Ver CV</a>
+    </footer>
+  </section>
+</Layout>

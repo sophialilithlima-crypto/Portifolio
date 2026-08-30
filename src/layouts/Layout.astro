@@ -1,0 +1,66 @@
+---
+import "../styles/global.css";
+import ThemeToggle from "../components/ThemeToggle";
+import { profile } from "../domain/profile";
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: "pt" | "en";
+  cv?: boolean;
+}
+
+const {
+  title = `${profile.name} — Portfolio`,
+  description = "Portfolio de Sophia Lilith, estudante e desenvolvedora em formação.",
+  lang = "pt",
+  cv = false
+} = Astro.props;
+
+const path = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+const prefix = `${base}${lang}`;
+const opposite = lang === "pt" ? `${base}en/` : `${base}pt/`;
+const oppositeLabel = lang === "pt" ? "EN" : "PT-BR";
+---
+
+<!doctype html>
+<html lang={lang === "pt" ? "pt-BR" : "en"} class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    {!cv && (
+      <header class="no-print fixed left-0 right-0 top-0 z-50">
+        <div class="container-page mt-4">
+          <nav class="glass flex items-center justify-between rounded-2xl px-4 py-3">
+            <a href={prefix} class="font-semibold tracking-tight">SL<span class="text-violet-300">.</span></a>
+            <div class="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
+              <a href={`${prefix}#about`} class="hover:text-white">Sobre</a>
+              <a href={`${prefix}#skills`} class="hover:text-white">Tecnologias</a>
+              <a href={`${prefix}#projects`} class="hover:text-white">Projetos</a>
+              <a href={`${prefix}#contact`} class="hover:text-white">Contato</a>
+              <a href={`${prefix}/cv`} class="hover:text-white">CV</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href={opposite} class="pill px-3 py-2 text-xs text-zinc-300 hover:bg-white/10">{oppositeLabel}</a>
+              <ThemeToggle client:load />
+            </div>
+          </nav>
+        </div>
+      </header>
+    )}
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

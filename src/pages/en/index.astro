@@ -1,0 +1,156 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { profile, projects, skills } from "../../domain/profile";
+
+const projectsEn = [
+  {
+    ...projects[0],
+    title: "Pokédex",
+    description: "Interactive application created to explore Pokémon data, with search, information, evolutions, statistics and favorites. It was one of my first practical experiences with API consumption and web interface development.",
+    learning: "The project helped me turn what I was studying into practice and gain experience working with external data and interface interaction."
+  },
+  {
+    ...projects[1],
+    title: "React Challenge 3 — Full Stack CRUD",
+    description: "Full Stack application for managing categories, suppliers and products. It combines a React frontend, Go and Gin backend, PostgreSQL database, and Docker/Docker Compose environment.",
+    learning: "This was my first experience combining several parts of a Full Stack application in the same project. The main learning was gaining practice with frontend, backend, databases, APIs and application organization."
+  }
+];
+---
+
+<Layout lang="en" title={`${profile.name} — Portfolio`} description="Portfolio of Sophia Lilith, student and developer in training.">
+  <div class="grid-bg">
+    <section class="container-page flex min-h-screen items-center pt-28 pb-20">
+      <div class="grid w-full gap-12 lg:grid-cols-[1.25fr_.75fr] lg:items-center">
+        <div class="reveal">
+          <span class="pill inline-flex px-4 py-2 text-xs uppercase tracking-[.22em] text-violet-200">Developer in training</span>
+          <h1 class="mt-7 text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+            Hello, I'm <span class="text-gradient">Sophia Lilith.</span>
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+            High school student exploring programming and building my first projects with a focus on learning, practice and growth.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">View projects</a>
+            <a href="#contact" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">Get in touch</a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-3 text-sm text-zinc-500">
+            <span>15 years old</span><span>•</span><span>High school</span><span>•</span><span>Interested in games</span>
+          </div>
+        </div>
+
+        <div class="reveal mx-auto w-full max-w-sm lg:ml-auto" style="animation-delay:120ms">
+          <div class="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-2">
+            <img src={`${import.meta.env.BASE_URL}images/sophia.jpg`} alt="Photo of Sophia Lilith" class="aspect-[4/5] w-full rounded-[26px] object-cover object-center" />
+            <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
+              <p class="text-xs uppercase tracking-[.2em] text-violet-300">Goal</p>
+              <p class="mt-1 text-sm text-white">Keep learning and build my career in programming.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="about" class="container-page py-24">
+    <div class="grid gap-12 lg:grid-cols-[.65fr_1.35fr]">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">01 — About me</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight">My journey so far.</h2>
+      </div>
+      <div class="space-y-5 text-lg leading-8 text-zinc-400">
+        <p>
+          I'm Sophia Lilith, a high school student and developer in training. I started studying programming at the beginning of 2026, motivated by my father's influence and contact with technology. Since then, I've been building my first projects and exploring different technologies, turning what I learn into practical experience.
+        </p>
+        <p>
+          I'm especially interested in game development. My goal is to keep improving, learn new technologies and gradually build my career as a developer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="border-y border-white/6 bg-white/[.018] py-24">
+    <div class="container-page">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">02 — Technologies</p>
+      <h2 class="mt-3 text-3xl font-semibold tracking-tight">Tools and knowledge.</h2>
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {Object.entries(skills).map(([group, items]) => (
+          <div class="card p-6">
+            <h3 class="font-semibold text-white">{group}</h3>
+            <div class="mt-5 flex flex-wrap gap-2">
+              {items.map((item) => <span class="pill px-3 py-2 text-sm text-zinc-300">{item}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container-page py-24">
+    <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">03 — Projects</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight">My first projects.</h2>
+      </div>
+      <p class="max-w-md text-sm leading-6 text-zinc-500">
+        Projects created during my studies to practice technologies, understand new tools and gain experience.
+      </p>
+    </div>
+    <div class="mt-10 grid gap-6 lg:grid-cols-2">
+      {projectsEn.map((project) => <ProjectCard {...project} />)}
+    </div>
+  </section>
+
+  <section class="border-y border-white/6 bg-white/[.018] py-24">
+    <div class="container-page grid gap-10 lg:grid-cols-2">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">04 — Goal</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight">Grow through every step.</h2>
+      </div>
+      <div class="card p-7">
+        <p class="text-lg leading-8 text-zinc-300">
+          I want to keep studying programming, learn new technologies and develop projects that expand my experience. I'm especially interested in games and want to build my career by continuously seeking knowledge.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-page py-24">
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="card p-7">
+        <p class="text-xs uppercase tracking-[.2em] text-violet-300">Languages</p>
+        <div class="mt-5 space-y-4">
+          <div class="flex items-center justify-between border-b border-white/8 pb-4"><span>Portuguese</span><span class="text-sm text-zinc-500">Native</span></div>
+          <div class="flex items-center justify-between"><span>English</span><span class="text-sm text-zinc-500">Intermediate</span></div>
+        </div>
+      </div>
+      <div class="card p-7">
+        <p class="text-xs uppercase tracking-[.2em] text-violet-300">Education</p>
+        <h3 class="mt-5 text-xl font-semibold">High school</h3>
+        <p class="mt-2 leading-7 text-zinc-500">Currently studying in high school and developing programming skills through self-study and practical projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container-page pb-24">
+    <div class="card overflow-hidden p-8 sm:p-12">
+      <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">05 — Contact</p>
+      <div class="mt-4 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div>
+          <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Let's talk.</h2>
+          <p class="mt-4 max-w-xl leading-7 text-zinc-400">You can contact me by email or visit my GitHub and Instagram.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href={`mailto:${profile.email}`} class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">Email</a>
+          <a href={profile.github} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">GitHub</a>
+          <a href={profile.instagram} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <footer class="flex flex-col gap-3 py-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
+      <span>© {profile.year} {profile.name}</span>
+      <a href={`${import.meta.env.BASE_URL}en/cv`} class="hover:text-zinc-300">View CV</a>
+    </footer>
+  </section>
+</Layout>

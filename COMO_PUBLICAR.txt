@@ -1,0 +1,31 @@
+COMO COLOCAR O PORTFÓLIO NO GITHUB
+
+1. Crie um repositório novo no GitHub chamado:
+   sophia-portfolio
+
+2. Baixe e extraia este arquivo ZIP.
+
+3. Entre na pasta extraída.
+
+4. Abra o terminal nessa pasta e rode:
+   npm install
+
+5. Para testar no computador:
+   npm run dev
+
+6. Para publicar:
+   git init
+   git add .
+   git commit -m "feat: create Sophia portfolio"
+   git branch -M main
+   git remote add origin https://github.com/sophialilithlima-crypto/sophia-portfolio.git
+   git push -u origin main
+
+7. No GitHub:
+   Settings -> Pages -> Source -> GitHub Actions
+
+O workflow já está preparado para publicar automaticamente.
+
+IMPORTANTE:
+- O nome sugerido do repositório é exatamente "sophia-portfolio".
+- Se você escolher outro nome, a publicação ainda pode funcionar pelo workflow, pois o caminho é calculado automaticamente pelo GitHub Actions.
