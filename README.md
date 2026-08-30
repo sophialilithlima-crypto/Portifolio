@@ -58,4 +58,4 @@ Se o repositório for chamado `sophia-portfolio`, a página ficará em:
 
 ## Observação
 
-O conteúdo foi escrito para representar uma estudante em início de trajetória na programação, sem atribuir experiência profissional que ainda não foi informada.
+O conteúdo foi escrito para representar uma estudante em início de trajetória na programação, sem atribuir experiência profissional.
