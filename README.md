@@ -50,11 +50,6 @@ npm run preview
 
 ## GitHub Pages
 
-O workflow em `.github/workflows/deploy.yml` publica automaticamente o projeto no GitHub Pages sempre que houver um push para a branch `main`.
-
-Se o repositório for chamado `sophia-portfolio`, a página ficará em:
-
-`https://sophialilithlima-crypto.github.io/sophia-portfolio/`
 
 ## Observação
 
