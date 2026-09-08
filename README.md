@@ -50,12 +50,12 @@ npm run preview
 
 ## GitHub Pages
 
-O workflow em `.github/workflows/deploy.yml` publica automaticamente o projeto no GitHub Pages sempre que houver um push para a branch `main`.
+Acesse a versão publicada do portfólio:
 
-A página ficará no endereço do GitHub Pages correspondente ao seu repositório. Para o nome sugerido `sophia-portfolio`, o endereço será:
+**https://sophialilithlima-crypto.github.io/Portifolio/**
 
-`https://sophialilithlima-crypto.github.io/sophia-portfolio/`
+O projeto utiliza GitHub Actions para gerar e publicar automaticamente a versão estática no GitHub Pages a cada push para a branch `main`.
 
 ## Observação
 
-O conteúdo foi escrito para representar uma estudante em início de trajetória na programação, sem atribuir experiência profissional que ainda não foi informada.
+O conteúdo representa uma estudante em início de trajetória na programação, destacando projetos, conhecimentos e evolução sem atribuir experiência profissional que ainda não foi informada.
