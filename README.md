@@ -54,8 +54,6 @@ Acesse a versão publicada do portfólio:
 
 **https://sophialilithlima-crypto.github.io/Portifolio/**
 
-O projeto utiliza GitHub Actions para gerar e publicar automaticamente a versão estática no GitHub Pages a cada push para a branch `main`.
-
 ## Observação
 
 O conteúdo representa uma estudante em início de trajetória na programação, destacando projetos, conhecimentos e evolução sem atribuir experiência profissional que ainda não foi informada.
