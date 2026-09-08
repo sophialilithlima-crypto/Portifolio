@@ -52,7 +52,7 @@ npm run preview
 
 Acesse a versão publicada do portfólio:
 
-**https://sophialilithlima-crypto.github.io/Portifolio/**
+**[https://sophialilithlima-crypto.github.io/Portifolio/](https://sophialilithlima-crypto.github.io/Portifolio/pt/)**
 
 ## Observação
 
