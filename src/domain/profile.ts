@@ -9,36 +9,31 @@ export const profile = {
 };
 
 export const skills = {
-  "Linguagens e fundamentos": [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "Python",
-    "Go",
-    "Algoritmos"
-  ],
-  "Frontend": [
-    "React",
-    "Vite",
-    "React Router",
-    "Axios"
-  ],
-  "Backend": [
-    "Go",
-    "Gin",
-    "Node.js"
-  ],
-  "Bancos de dados": [
-    "PostgreSQL",
-    "MySQL"
-  ],
-  "Ferramentas": [
-    "Git",
-    "GitHub",
-    "Docker",
-    "Docker Compose",
-    "npm"
-  ]
+  "Linguagens e fundamentos": {
+    icon: "</>",
+    accent: "skill-violet",
+    items: ["HTML5", "CSS3", "JavaScript", "Python", "Go", "Algoritmos"]
+  },
+  "Frontend": {
+    icon: "UI",
+    accent: "skill-indigo",
+    items: ["React", "Vite", "React Router", "Axios"]
+  },
+  "Backend": {
+    icon: "API",
+    accent: "skill-cyan",
+    items: ["Go", "Gin", "Node.js"]
+  },
+  "Bancos de dados": {
+    icon: "DB",
+    accent: "skill-emerald",
+    items: ["PostgreSQL", "MySQL"]
+  },
+  "Ferramentas": {
+    icon: "⌘",
+    accent: "skill-amber",
+    items: ["Git", "GitHub", "Docker", "Docker Compose", "npm"]
+  }
 };
 
 export const projects = [
@@ -57,17 +52,25 @@ export const projects = [
       "Aplicação Full Stack para gerenciamento de categorias, fornecedores e produtos. O projeto reúne frontend em React, backend em Go com Gin, banco PostgreSQL e ambiente com Docker e Docker Compose.",
     learning:
       "Foi minha primeira experiência trabalhando com vários elementos de uma aplicação Full Stack no mesmo projeto. O principal aprendizado foi ganhar prática com frontend, backend, banco de dados, APIs e organização de uma aplicação completa.",
-    technologies: [
-      "React",
-      "Vite",
-      "Go",
-      "Gin",
-      "PostgreSQL",
-      "Docker"
-    ],
+    technologies: ["React", "Vite", "Go", "Gin", "PostgreSQL", "Docker"],
     github: "https://github.com/sophialilithlima-crypto/desafio-react3"
   }
 ];
 
+export const creative = {
+  ballet: {
+    title: "Ballet",
+    summary:
+      "Pratico ballet há 4 anos e atualmente estou no nível intermediário. Também já iniciei meu trabalho nas pontas, desenvolvendo disciplina, técnica e consciência corporal.",
+    tags: ["4 anos", "Intermediário", "Iniciação nas pontas"]
+  },
+  watercolor: {
+    title: "Desenho e aquarela",
+    summary:
+      "Desenho e pinto com aquarela há 5 anos. É uma prática que desenvolve minha criatividade, observação, paciência e atenção aos detalhes.",
+    tags: ["5 anos", "Desenho", "Aquarela"]
+  }
+};
+
 export const bio =
-  "Sou Sophia Lilith, estudante do ensino médio e desenvolvedora em formação. Comecei a estudar programação no início de 2026, motivada pelo contato e influência do meu pai com a área de tecnologia. Desde então, venho desenvolvendo meus primeiros projetos e explorando diferentes tecnologias, buscando transformar o aprendizado teórico em experiências práticas. Tenho interesse especial pela área de desenvolvimento de jogos e meu objetivo é continuar evoluindo na programação, adquirindo novos conhecimentos e construindo gradualmente minha carreira como desenvolvedora.";
+  "Sou Sophia Lilith, estudante do ensino médio e desenvolvedora em formação. Comecei a estudar programação no início de 2026, motivada pelo contato e influência do meu pai com a área de tecnologia. Desde então, venho desenvolvendo meus primeiros projetos e explorando diferentes tecnologias, buscando transformar o aprendizado em experiências práticas. Meu interesse por tecnologia, porém, não se limita à programação: também tenho uma trajetória criativa no ballet, no desenho e na aquarela. Gosto de aprender áreas diferentes e acredito que essa combinação entre lógica, criatividade e disciplina faz parte de quem estou construindo como pessoa e futura profissional.";

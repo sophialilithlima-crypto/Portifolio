@@ -36,10 +36,10 @@ import { profile, projects, skills } from "../../domain/profile";
     <section class="mt-8">
       <h2 class="text-lg font-bold uppercase tracking-wide">Technologies and knowledge</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
-        {Object.entries(skills).map(([group, items]) => (
+        {Object.entries(skills).map(([group, data]) => (
           <div>
             <h3 class="font-semibold">{group}</h3>
-            <p class="mt-1 text-sm leading-6 text-zinc-600">{items.join(" • ")}</p>
+            <p class="mt-1 text-sm leading-6 text-zinc-600">{data.items.join(" • ")}</p>
           </div>
         ))}
       </div>
@@ -74,9 +74,16 @@ import { profile, projects, skills } from "../../domain/profile";
     </section>
 
     <section class="mt-8">
+      <h2 class="text-lg font-bold uppercase tracking-wide">Beyond technology</h2>
+      <p class="mt-3 text-sm leading-6 text-zinc-700">
+        Ballet for 4 years, currently at an intermediate level with an introduction to pointe work. I have also been drawing and painting with watercolor for 5 years, developing creativity, observation, patience and attention to detail.
+      </p>
+    </section>
+
+    <section class="mt-8">
       <h2 class="text-lg font-bold uppercase tracking-wide">Goal</h2>
       <p class="mt-3 text-sm leading-6 text-zinc-700">
-        Keep developing programming knowledge, explore new technologies and gain experience through projects, with a special interest in game development.
+        Keep developing programming knowledge, explore new technologies and gain experience through projects while continuing to expand my creative skills. I am especially interested in game development and want to build my career by continuously seeking knowledge.
       </p>
     </section>
   </div>
