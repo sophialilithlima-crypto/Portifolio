@@ -58,7 +58,7 @@ npm run preview
 
 Acesse a versão publicada do portfólio:
 
-**https://sophialilithlima-crypto.github.io/Portifolio/**
+**[https://sophialilithlima-crypto.github.io/Portifolio/](https://sophialilithlima-crypto.github.io/Portifolio/pt/)**
 
 O projeto utiliza GitHub Actions para gerar e publicar automaticamente a versão estática no GitHub Pages a cada push para a branch `main`.
 
