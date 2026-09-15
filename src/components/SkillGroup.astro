@@ -31,7 +31,7 @@ const slugify = (value: string) =>
   <div class="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
     {items.map((item) => (
       <div class="tool-chip">
-        <span class={`tool-mark tool-${slugify(item)}`} aria-hidden="true">{item.slice(0, 2).toUpperCase()}</span>
+        <img class="tool-image" src={`${import.meta.env.BASE_URL}images/tools/${slugify(item)}.svg`} alt={`${item} — ícone`} loading="lazy" />
         <span class="tool-label">{item}</span>
       </div>
     ))}

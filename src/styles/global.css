@@ -121,41 +121,20 @@ a { text-underline-offset: 4px; }
   box-shadow: 0 10px 24px rgba(0,0,0,.10);
 }
 
-.tool-mark {
-  display: inline-grid;
-  width: 31px;
-  height: 31px;
+.tool-image {
+  width: 38px;
+  height: 38px;
   flex: 0 0 auto;
-  place-items: center;
-  border-radius: 10px;
-  font-size: .58rem;
-  font-weight: 900;
-  letter-spacing: -.04em;
-  border: 1px solid rgba(255,255,255,.13);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
+  display: block;
+  object-fit: contain;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  transform: translateZ(0);
 }
-.tool-label { min-width: 0; }
+.tool-label { min-width: 0; font-weight: 650; }
 
-/* Per-tool visual identity: works in both themes */
-.tool-html5 { background: linear-gradient(135deg,#fb923c,#f97316); color:#fff7ed; }
-.tool-css3 { background: linear-gradient(135deg,#60a5fa,#2563eb); color:#eff6ff; }
-.tool-javascript { background: linear-gradient(135deg,#fde047,#eab308); color:#3f3200; }
-.tool-python { background: linear-gradient(135deg,#60a5fa,#facc15); color:#172554; }
-.tool-go { background: linear-gradient(135deg,#67e8f9,#0891b2); color:#083344; }
-.tool-algoritmos { background: linear-gradient(135deg,#c4b5fd,#8b5cf6); color:#2e1065; }
-.tool-react { background: linear-gradient(135deg,#67e8f9,#06b6d4); color:#083344; }
-.tool-vite { background: linear-gradient(135deg,#a78bfa,#7c3aed); color:#f5f3ff; }
-.tool-react-router { background: linear-gradient(135deg,#fda4af,#e11d48); color:#fff1f2; }
-.tool-axios { background: linear-gradient(135deg,#c4b5fd,#6366f1); color:#eef2ff; }
-.tool-gin { background: linear-gradient(135deg,#86efac,#16a34a); color:#052e16; }
-.tool-node-js { background: linear-gradient(135deg,#86efac,#15803d); color:#052e16; }
-.tool-postgresql { background: linear-gradient(135deg,#93c5fd,#2563eb); color:#eff6ff; }
-.tool-mysql { background: linear-gradient(135deg,#fde68a,#f59e0b); color:#422006; }
-.tool-git { background: linear-gradient(135deg,#fb7185,#dc2626); color:#fff1f2; }
-.tool-github { background: linear-gradient(135deg,#a1a1aa,#27272a); color:#fff; }
-.tool-docker { background: linear-gradient(135deg,#67e8f9,#0284c7); color:#082f49; }
-.tool-docker-compose { background: linear-gradient(135deg,#7dd3fc,#2563eb); color:#eff6ff; }
-.tool-npm { background: linear-gradient(135deg,#fca5a5,#dc2626); color:#fff1f2; }
+/* Tool identities are rendered as local SVG assets so they remain vivid in both themes. */
 
 /* Creative area */
 .creative-card { overflow: hidden; }
@@ -329,9 +308,10 @@ html.light .tool-chip:hover {
   border-color: rgba(109,40,217,.30);
   box-shadow: 0 10px 24px rgba(15,23,42,.08);
 }
-html.light .tool-mark {
-  border-color: rgba(15,23,42,.10);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.70), 0 5px 12px rgba(15,23,42,.08);
+html.light .tool-image {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
 html.light .creative-placeholder {
