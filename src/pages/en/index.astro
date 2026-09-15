@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import SkillGroup from "../../components/SkillGroup.astro";
+import ArtCarousel from "../../components/ArtCarousel.astro";
 import { creative, profile, projects, skills } from "../../domain/profile";
 
 const projectsEn = [
@@ -128,23 +129,13 @@ const projectsEn = [
           </div>
         </article>
 
-        <article class="card creative-card p-6">
-          <div class="creative-placeholder">
-            <div class="creative-placeholder-inner">
-              <div class="creative-placeholder-icon" aria-hidden="true">✦</div>
-              <p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Coming soon</p>
-              <h3 class="mt-2 text-2xl font-semibold text-white">{creative.watercolor.title}</h3>
-              <p class="mt-3 leading-7 text-zinc-400">A photo of my drawing and watercolor work will be added here later.</p>
-            </div>
-          </div>
-          <div class="pt-6">
-            <p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Expression and creativity</p>
-            <p class="mt-3 leading-7 text-zinc-400">I have been drawing and painting with watercolor for 5 years. It is a practice that develops creativity, observation, patience and attention to detail.</p>
-            <div class="achievement-tags mt-5">
-              {creative.watercolor.tags.map((tag) => <span class="achievement-tag">{tag}</span>)}
-            </div>
-          </div>
-        </article>
+        <ArtCarousel
+          title="Drawing and watercolor"
+          summary="I have been drawing and painting with watercolor for 5 years. It is a practice that develops creativity, observation, patience and attention to detail."
+          tags={["5 years", "Drawing", "Watercolor"]}
+          eyebrow="Expression and creativity"
+          lang="en"
+        />
       </div>
     </div>
   </section>
