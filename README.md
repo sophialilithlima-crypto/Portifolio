@@ -60,10 +60,6 @@ npm run preview
 
 **https://sophialilithlima-crypto.github.io/Portifolio/**
 
-Este é o endereço público do mesmo repositório `Portifolio`. Cada atualização enviada para a branch `main` deve ser refletida nessa página após a execução do GitHub Actions.
-
-O projeto utiliza GitHub Actions para gerar e publicar automaticamente a versão estática no GitHub Pages a cada push para a branch `main`.
-
 ## Observação
 
 O conteúdo representa uma estudante em início de trajetória na programação, destacando projetos, conhecimentos e evolução sem atribuir experiência profissional que ainda não foi informada. A seção de interesses pessoais também apresenta atividades praticadas ao longo dos anos, como ballet, desenho e aquarela.
