@@ -7,6 +7,14 @@ interface Props {
 }
 
 const { title, items, icon, accent } = Astro.props;
+
+const slugify = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 ---
 
 <div class="card skill-group h-full p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-300/35">
@@ -20,11 +28,11 @@ const { title, items, icon, accent } = Astro.props;
     </div>
   </div>
 
-  <div class="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-2">
+  <div class="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
     {items.map((item) => (
       <div class="tool-chip">
-        <span class="tool-mark" aria-hidden="true">{item.slice(0, 2).toUpperCase()}</span>
-        <span>{item}</span>
+        <span class={`tool-mark tool-${slugify(item)}`} aria-hidden="true">{item.slice(0, 2).toUpperCase()}</span>
+        <span class="tool-label">{item}</span>
       </div>
     ))}
   </div>

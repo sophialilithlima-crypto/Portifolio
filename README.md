@@ -56,9 +56,11 @@ npm run preview
 
 ## GitHub Pages
 
-Acesse a versão publicada do portfólio:
+### Portfólio online
 
-**[https://sophialilithlima-crypto.github.io/Portifolio/](https://sophialilithlima-crypto.github.io/Portifolio/pt/)**
+**https://sophialilithlima-crypto.github.io/Portifolio/**
+
+Este é o endereço público do mesmo repositório `Portifolio`. Cada atualização enviada para a branch `main` deve ser refletida nessa página após a execução do GitHub Actions.
 
 O projeto utiliza GitHub Actions para gerar e publicar automaticamente a versão estática no GitHub Pages a cada push para a branch `main`.
 

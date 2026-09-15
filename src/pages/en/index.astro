@@ -34,7 +34,7 @@ const projectsEn = [
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="#projects" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">View projects</a>
-            <a href="#creative" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">Explore other interests</a>
+            <a href="#creative" class="pill px-5 py-3 text-sm text-zinc-200 hover-soft">Explore other interests</a>
           </div>
           <div class="mt-10 flex flex-wrap gap-3 text-sm text-zinc-500">
             <span>15 years old</span><span>•</span><span>High school</span><span>•</span><span>Technology + creativity</span>
@@ -42,9 +42,9 @@ const projectsEn = [
         </div>
 
         <div class="reveal mx-auto w-full max-w-sm lg:ml-auto" style="animation-delay:120ms">
-          <div class="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-violet-950/20">
+          <div class="relative overflow-hidden rounded-[32px] border border-subtle image-frame p-2 shadow-2xl shadow-violet-950/20">
             <img src={`${import.meta.env.BASE_URL}images/sophia.jpg`} alt="Photo of Sophia Lilith" class="aspect-[4/5] w-full rounded-[26px] object-cover object-center" />
-            <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
+            <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-subtle overlay-card p-4 backdrop-blur-xl">
               <p class="text-xs uppercase tracking-[.2em] text-violet-300">Who I am</p>
               <p class="mt-1 text-sm text-white">A student who enjoys combining logic, creativity, discipline and curiosity.</p>
             </div>
@@ -71,7 +71,7 @@ const projectsEn = [
     </div>
   </section>
 
-  <section id="skills" class="border-y border-white/6 bg-white/[.018] py-24">
+  <section id="skills" class="border-y section-soft py-24">
     <div class="container-page">
       <div class="max-w-2xl">
         <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">02 — Tools and knowledge</p>
@@ -103,7 +103,7 @@ const projectsEn = [
     </div>
   </section>
 
-  <section id="creative" class="border-y border-white/6 bg-white/[.018] py-24">
+  <section id="creative" class="border-y section-soft py-24">
     <div class="container-page">
       <div class="max-w-2xl">
         <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">04 — Beyond programming</p>
@@ -154,7 +154,7 @@ const projectsEn = [
       <div class="card p-7">
         <p class="text-xs uppercase tracking-[.2em] text-violet-300">Languages</p>
         <div class="mt-5 space-y-4">
-          <div class="flex items-center justify-between border-b border-white/8 pb-4"><span class="text-zinc-200">Portuguese</span><span class="text-sm text-zinc-500">Native</span></div>
+          <div class="flex items-center justify-between border-bottom-subtle pb-4"><span class="text-zinc-200">Portuguese</span><span class="text-sm text-zinc-500">Native</span></div>
           <div class="flex items-center justify-between"><span class="text-zinc-200">English</span><span class="text-sm text-zinc-500">Intermediate</span></div>
         </div>
       </div>
@@ -176,8 +176,8 @@ const projectsEn = [
         </div>
         <div class="flex flex-wrap gap-3">
           <a href={`mailto:${profile.email}`} class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">Email</a>
-          <a href={profile.github} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">GitHub</a>
-          <a href={profile.instagram} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">Instagram</a>
+          <a href={profile.github} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover-soft">GitHub</a>
+          <a href={profile.instagram} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover-soft">Instagram</a>
         </div>
       </div>
     </div>
