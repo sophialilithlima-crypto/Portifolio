@@ -139,7 +139,8 @@ export const creative = {
       "Desenho e pinto com aquarela há 5 anos. É uma prática que desenvolve minha criatividade, observação, paciência e atenção aos detalhes.",
     tags: ["5 anos", "Desenho", "Aquarela"],
     images: [
-      { src: "/images/desenho-1.png", alt: "Desenho de Sophia em caderno de estudos" }
+      { src: "/images/watercolor-1.jpeg", alt: "Ilustração digital criada por Sophia Lilith" },
+      { src: "/images/watercolor-2.jpeg", alt: "Pintura em aquarela criada por Sophia Lilith" }
     ]
   }
 };
