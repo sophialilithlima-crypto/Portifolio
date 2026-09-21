@@ -4,35 +4,33 @@ Portfólio pessoal de Sophia Lilith, estudante do ensino médio e desenvolvedora
 
 O projeto foi inspirado na organização do portfólio de referência fornecido pelo meu pai, utilizando Astro, React, Tailwind CSS e TypeScript.
 
-## Sobre o projeto
+## O que o portfólio apresenta
 
-O portfólio apresenta minha trajetória inicial na programação e também outras áreas que fazem parte da minha formação pessoal e criativa, como ballet, desenho e aquarela.
-
-## Principais seções
-
-- Apresentação
-- Sobre mim
-- Ferramentas e conhecimentos
+- Trajetória inicial na programação
+- Ferramentas e conhecimentos com logos das tecnologias
+- Skills e competências em desenvolvimento
 - Projetos de programação
-- Ballet
+- Ballet, com galeria de fotos
 - Desenho e aquarela
 - Idiomas
 - Formação
 - Contato
-- CV para impressão
+- CV em português e inglês
+- Tema claro e escuro
+- Versão responsiva
 
-## Tecnologias do portfólio
-
-- Astro
-- React
-- Tailwind CSS
-- TypeScript
-- GitHub Pages
-
-## Projetos apresentados
+## Projetos
 
 - [Pokédex](https://github.com/sophialilithlima-crypto/Pokedex)
 - [Desafio React 3](https://github.com/sophialilithlima-crypto/desafio-react3)
+
+## GitHub Pages
+
+A versão publicada do portfólio fica em:
+
+**https://sophialilithlima-crypto.github.io/Portifolio/**
+
+O projeto utiliza GitHub Actions para gerar e publicar a versão estática no GitHub Pages a cada push para a branch `main`.
 
 ## Rodar localmente
 
@@ -41,28 +39,19 @@ npm install
 npm run dev
 ```
 
-Depois, acesse o endereço mostrado pelo Astro, normalmente:
-
-```text
-http://localhost:4321
-```
-
-## Gerar versão de produção
+Para gerar a versão de produção:
 
 ```bash
 npm run build
-npm run preview
 ```
 
-## GitHub Pages
+## Tecnologias usadas no próprio portfólio
 
-### Portfólio online
-
-**https://sophialilithlima-crypto.github.io/Portifolio/**
-
-Este é o endereço público do mesmo repositório `Portifolio`. Cada atualização enviada para a branch `main` deve ser refletida nessa página após a execução do GitHub Actions.
-
-O projeto utiliza GitHub Actions para gerar e publicar automaticamente a versão estática no GitHub Pages a cada push para a branch `main`.
+- Astro
+- React
+- Tailwind CSS
+- TypeScript
+- GitHub Pages
 
 ## Observação
 

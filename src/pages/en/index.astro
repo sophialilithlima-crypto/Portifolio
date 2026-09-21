@@ -2,178 +2,40 @@
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import SkillGroup from "../../components/SkillGroup.astro";
-import ArtCarousel from "../../components/ArtCarousel.astro";
-import { creative, profile, projects, skills } from "../../domain/profile";
+import ImageCarousel from "../../components/ImageCarousel.astro";
+import { creative, profile, projects, skills, softSkills } from "../../domain/profile";
 
 const projectsEn = [
-  {
-    ...projects[0],
-    title: "Pokédex",
-    description: "Interactive application created to explore Pokémon data, with search, information, evolutions, statistics and favorites. It was one of my first practical experiences with API consumption and web interface development.",
-    learning: "The project helped me turn what I was studying into practice and gain experience working with external data and interface interaction."
-  },
-  {
-    ...projects[1],
-    title: "React Challenge 3 — Full Stack CRUD",
-    description: "Full Stack application for managing categories, suppliers and products. It combines a React frontend, Go and Gin backend, PostgreSQL database, and Docker/Docker Compose environment.",
-    learning: "This was my first experience combining several parts of a Full Stack application in the same project. The main learning was gaining practice with frontend, backend, databases, APIs and application organization."
-  }
+  { ...projects[0], title: "Pokédex", description: "Interactive application created to explore Pokémon data, with search, information, evolutions, statistics and favorites. It was one of my first practical experiences with API consumption and web interface development.", learning: "The project helped me turn what I was studying into practice and gain experience working with external data and interface interaction." },
+  { ...projects[1], title: "React Challenge 3 — Full Stack CRUD", description: "Full Stack application for managing categories, suppliers and products. It combines a React frontend, Go and Gin backend, PostgreSQL database, and Docker/Docker Compose environment.", learning: "This was my first experience combining several parts of a Full Stack application in the same project. The main learning was gaining practice with frontend, backend, databases, APIs and application organization." }
+];
+
+const softSkillsEn = [
+  ["Continuous learning", "I look for new technologies and turn study into practice through projects."],
+  ["Problem solving", "I develop logical reasoning by studying algorithms and building applications."],
+  ["Creativity", "Drawing, watercolor and my interest in games are part of how I explore and create ideas."],
+  ["Discipline", "Ballet and studying help me maintain consistency, practice and attention to the process."],
+  ["Attention to detail", "I enjoy improving both the functional side and the presentation of projects."],
+  ["Curiosity", "I like experimenting with new resources and understanding how different technologies work."]
 ];
 ---
 
 <Layout lang="en" title={`${profile.name} — Portfolio`} description="Portfolio of Sophia Lilith, student and developer in training.">
   <div class="grid-bg">
-    <section class="container-page flex min-h-screen items-center pt-28 pb-20">
-      <div class="grid w-full gap-12 lg:grid-cols-[1.25fr_.75fr] lg:items-center">
-        <div class="reveal">
-          <span class="pill inline-flex px-4 py-2 text-xs uppercase tracking-[.22em] text-violet-200">Developer in training</span>
-          <h1 class="mt-7 text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-            Hello, I'm <span class="text-gradient">Sophia Lilith.</span>
-          </h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-            High school student exploring technology and creativity through programming, ballet and visual arts.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">View projects</a>
-            <a href="#creative" class="pill px-5 py-3 text-sm text-zinc-200 hover-soft">Explore other interests</a>
-          </div>
-          <div class="mt-10 flex flex-wrap gap-3 text-sm text-zinc-500">
-            <span>15 years old</span><span>•</span><span>High school</span><span>•</span><span>Technology + creativity</span>
-          </div>
-        </div>
-
-        <div class="reveal mx-auto w-full max-w-sm lg:ml-auto" style="animation-delay:120ms">
-          <div class="relative overflow-hidden rounded-[32px] border border-subtle image-frame p-2 shadow-2xl shadow-violet-950/20">
-            <img src={`${import.meta.env.BASE_URL}images/sophia.jpg`} alt="Photo of Sophia Lilith" class="aspect-[4/5] w-full rounded-[26px] object-cover object-center" />
-            <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-subtle overlay-card p-4 backdrop-blur-xl">
-              <p class="text-xs uppercase tracking-[.2em] text-violet-300">Who I am</p>
-              <p class="mt-1 text-sm text-white">A student who enjoys combining logic, creativity, discipline and curiosity.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="container-page flex min-h-screen items-center pt-28 pb-20"><div class="grid w-full gap-12 lg:grid-cols-[1.25fr_.75fr] lg:items-center"><div class="reveal"><span class="pill inline-flex px-4 py-2 text-xs uppercase tracking-[.22em] text-violet-200">Developer in training</span><h1 class="mt-7 text-5xl font-semibold tracking-tight text-white sm:text-7xl">Hello, I'm <span class="text-gradient">Sophia Lilith.</span></h1><p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">High school student exploring technology and creativity through programming, ballet and visual arts.</p><div class="mt-8 flex flex-wrap gap-3"><a href="#projects" class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">View projects</a><a href="#creative" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">Other interests</a></div><div class="mt-10 flex flex-wrap gap-3 text-sm text-zinc-500"><span>15 years old</span><span>•</span><span>High school</span><span>•</span><span>Technology + creativity</span></div></div><div class="reveal mx-auto w-full max-w-sm lg:ml-auto" style="animation-delay:120ms"><div class="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-violet-950/20"><img src={`${import.meta.env.BASE_URL}images/sophia.jpg`} alt="Photo of Sophia Lilith" class="aspect-[4/5] w-full rounded-[26px] object-cover object-center" /><div class="absolute inset-x-7 bottom-7 rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur-xl"><p class="text-xs uppercase tracking-[.2em] text-violet-300">Who I am</p><p class="mt-1 text-sm text-white">A student who enjoys combining logic, creativity, discipline and curiosity.</p></div></div></div></div></section>
   </div>
 
-  <section id="about" class="container-page py-24">
-    <div class="grid gap-12 lg:grid-cols-[.65fr_1.35fr]">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">01 — About me</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight">Technology is only one part of my story.</h2>
-      </div>
-      <div class="space-y-5 text-lg leading-8 text-zinc-400">
-        <p>
-          I'm Sophia Lilith, a high school student and developer in training. I started studying programming at the beginning of 2026, motivated by my father's influence and contact with technology. Since then, I've been building my first projects and exploring different technologies, turning what I learn into practical experience. My interests go beyond programming: I also have a creative background in ballet, drawing and watercolor painting.
-        </p>
-        <p>
-          I enjoy learning different areas and believe that the combination of logic, creativity and discipline is part of who I am becoming as a person and future professional.
-        </p>
-      </div>
-    </div>
-  </section>
+  <section id="about" class="container-page py-24"><div class="grid gap-12 lg:grid-cols-[.65fr_1.35fr]"><div><p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">01 — About me</p><h2 class="mt-3 text-3xl font-semibold tracking-tight">Technology is only one part of my story.</h2></div><div class="space-y-5 text-lg leading-8 text-zinc-400"><p>I'm Sophia Lilith, a high school student and developer in training. I started studying programming at the beginning of 2026, motivated by my father's influence and contact with technology. Since then, I have been building my first projects and exploring different technologies, turning learning into practical experience.</p><p>My interests are not limited to programming: I also have a creative background in ballet, drawing and watercolor. I like learning different areas and bringing logic, creativity, discipline and curiosity together.</p></div></div></section>
 
-  <section id="skills" class="border-y section-soft py-24">
-    <div class="container-page">
-      <div class="max-w-2xl">
-        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">02 — Tools and knowledge</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight">A technical foundation in progress.</h2>
-        <p class="mt-4 leading-7 text-zinc-400">
-          Instead of a loose list of technologies, I organized my knowledge by area and highlighted the tools I have already used in practice.
-        </p>
-      </div>
-      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {Object.entries(skills).map(([group, data]) => (
-          <SkillGroup title={group} items={data.items} icon={data.icon} accent={data.accent} />
-        ))}
-      </div>
-    </div>
-  </section>
+  <section id="skills" class="border-y border-white/6 bg-white/[.018] py-24"><div class="container-page"><div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">02 — Tools and knowledge</p><h2 class="mt-3 text-3xl font-semibold tracking-tight">A technical foundation in progress.</h2><p class="mt-4 leading-7 text-zinc-400">Tools are shown with their visual identities to make the section clearer and highlight the technologies I have used in practice.</p></div><div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{Object.entries(skills).map(([group, data]) => <SkillGroup title={group} items={data.items} icon={data.icon} accent={data.accent} />)}</div></div></section>
 
-  <section id="projects" class="container-page py-24">
-    <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">03 — Projects</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight">My first projects.</h2>
-      </div>
-      <p class="max-w-md text-sm leading-6 text-zinc-500">
-        Projects created during my studies to practice technologies, understand new tools and gain experience.
-      </p>
-    </div>
-    <div class="mt-10 grid gap-6 lg:grid-cols-2">
-      {projectsEn.map((project) => <ProjectCard {...project} />)}
-    </div>
-  </section>
+  <section id="soft-skills" class="container-page py-24"><div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">03 — My skills</p><h2 class="mt-3 text-3xl font-semibold tracking-tight">Skills I am developing.</h2><p class="mt-4 leading-7 text-zinc-400">Beyond technologies, I also develop skills through studying, projects and creative activities.</p></div><div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{softSkillsEn.map(([title, description]) => <article class="card soft-skill-card p-6"><span class="soft-skill-dot"></span><h3 class="mt-5 text-lg font-semibold text-white">{title}</h3><p class="mt-2 text-sm leading-6 text-zinc-400">{description}</p></article>)}</div></section>
 
-  <section id="creative" class="border-y section-soft py-24">
-    <div class="container-page">
-      <div class="max-w-2xl">
-        <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">04 — Beyond programming</p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight">Creativity, discipline and expression.</h2>
-        <p class="mt-4 leading-7 text-zinc-400">
-          Some activities I have practiced for years also shape the way I develop attention, creativity, patience and discipline.
-        </p>
-      </div>
+  <section id="projects" class="border-y border-white/6 bg-white/[.018] py-24"><div class="container-page"><div class="flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">04 — Projects</p><h2 class="mt-3 text-3xl font-semibold tracking-tight">My first projects.</h2></div><p class="max-w-md text-sm leading-6 text-zinc-500">Projects created during my studies to practice technologies, understand new tools and gain experience.</p></div><div class="mt-10 grid gap-6 lg:grid-cols-2">{projectsEn.map((project) => <ProjectCard {...project} />)}</div></div></section>
 
-      <div class="mt-10 grid gap-6 lg:grid-cols-2">
-        <article class="card creative-card p-6">
-          <div class="creative-image-wrap ballet-image-wrap">
-            <img src={`${import.meta.env.BASE_URL}images/ballet.jpeg`} alt="Sophia during ballet practice" />
-          </div>
-          <div class="pt-6">
-            <p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Movement and discipline</p>
-            <h3 class="mt-2 text-2xl font-semibold text-white">{creative.ballet.title}</h3>
-            <p class="mt-3 leading-7 text-zinc-400">I have practiced ballet for 4 years and am currently at an intermediate level. I have also started pointe work, developing discipline, technique and body awareness.</p>
-            <div class="achievement-tags mt-5">
-              {creative.ballet.tags.map((tag) => <span class="achievement-tag">{tag}</span>)}
-            </div>
-          </div>
-        </article>
+  <section id="creative" class="container-page py-24"><div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">05 — Beyond programming</p><h2 class="mt-3 text-3xl font-semibold tracking-tight">Creativity, discipline and expression.</h2><p class="mt-4 leading-7 text-zinc-400">These activities are also part of my journey outside technology and help me develop attention, creativity, patience, discipline and expression.</p></div><div class="mt-10 grid gap-6 lg:grid-cols-2"><article class="card creative-card p-6"><ImageCarousel images={creative.ballet.images} label="Sophia Lilith ballet photo gallery" /><div class="pt-6"><p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Movement and discipline</p><h3 class="mt-2 text-2xl font-semibold text-white">Ballet</h3><p class="mt-3 leading-7 text-zinc-400">I have practiced ballet for 4 years and am currently at an intermediate level. I have also started pointe work, developing discipline, technique, expression and body awareness.</p><div class="achievement-tags mt-5"><span class="achievement-tag">4 years</span><span class="achievement-tag">Intermediate</span><span class="achievement-tag">Started pointe work</span></div></div></article><article class="card creative-card p-6"><div class="creative-placeholder"><div class="creative-placeholder-inner"><div class="creative-placeholder-icon" aria-hidden="true">✦</div><p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Image coming soon</p><h3 class="mt-2 text-2xl font-semibold text-white">Drawing and watercolor</h3><p class="mt-3 leading-7 text-zinc-400">This area is ready for the photo of my drawing and watercolor work.</p></div></div><div class="pt-6"><p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Expression and creativity</p><p class="mt-3 leading-7 text-zinc-400">I have been drawing and painting with watercolor for 5 years. It helps me develop creativity, observation, patience and attention to detail.</p><div class="achievement-tags mt-5"><span class="achievement-tag">5 years</span><span class="achievement-tag">Drawing</span><span class="achievement-tag">Watercolor</span></div></div></article></div></section>
 
-        <ArtCarousel
-          title="Drawing and watercolor"
-          summary="I have been drawing and painting with watercolor for 5 years. It is a practice that develops creativity, observation, patience and attention to detail."
-          tags={["5 years", "Drawing", "Watercolor"]}
-          eyebrow="Expression and creativity"
-          lang="en"
-        />
-      </div>
-    </div>
-  </section>
+  <section class="border-y border-white/6 bg-white/[.018] py-24"><div class="container-page grid gap-6 md:grid-cols-2"><div class="card p-7"><p class="text-xs uppercase tracking-[.2em] text-violet-300">Languages</p><div class="mt-5 space-y-4"><div class="flex items-center justify-between border-b border-white/8 pb-4"><span class="text-zinc-200">Portuguese</span><span class="text-sm text-zinc-500">Native</span></div><div class="flex items-center justify-between"><span class="text-zinc-200">English</span><span class="text-sm text-zinc-500">Intermediate</span></div></div></div><div class="card p-7"><p class="text-xs uppercase tracking-[.2em] text-violet-300">Education</p><h3 class="mt-5 text-xl font-semibold">High school</h3><p class="mt-2 leading-7 text-zinc-500">Currently in high school and developing programming skills through study and practical projects.</p></div></div></section>
 
-  <section class="container-page py-24">
-    <div class="grid gap-6 md:grid-cols-2">
-      <div class="card p-7">
-        <p class="text-xs uppercase tracking-[.2em] text-violet-300">Languages</p>
-        <div class="mt-5 space-y-4">
-          <div class="flex items-center justify-between border-bottom-subtle pb-4"><span class="text-zinc-200">Portuguese</span><span class="text-sm text-zinc-500">Native</span></div>
-          <div class="flex items-center justify-between"><span class="text-zinc-200">English</span><span class="text-sm text-zinc-500">Intermediate</span></div>
-        </div>
-      </div>
-      <div class="card p-7">
-        <p class="text-xs uppercase tracking-[.2em] text-violet-300">Education</p>
-        <h3 class="mt-5 text-xl font-semibold">High school</h3>
-        <p class="mt-2 leading-7 text-zinc-500">Currently studying in high school and developing programming skills through self-study and practical projects.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="container-page pb-10">
-    <div class="card overflow-hidden p-8 sm:p-12">
-      <p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">05 — Contact</p>
-      <div class="mt-4 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
-        <div>
-          <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Let's talk.</h2>
-          <p class="mt-4 max-w-xl leading-7 text-zinc-400">You can contact me by email or visit my GitHub and Instagram.</p>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <a href={`mailto:${profile.email}`} class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">Email</a>
-          <a href={profile.github} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover-soft">GitHub</a>
-          <a href={profile.instagram} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover-soft">Instagram</a>
-        </div>
-      </div>
-    </div>
-    <footer class="site-footer">
-      <span>© {profile.year} {profile.name} · Personal portfolio</span>
-    </footer>
-  </section>
+  <section id="contact" class="container-page py-24"><div class="card overflow-hidden p-8 sm:p-12"><p class="text-sm font-semibold uppercase tracking-[.2em] text-violet-300">06 — Contact</p><div class="mt-4 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end"><div><h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Let's talk.</h2><p class="mt-4 max-w-xl leading-7 text-zinc-400">You can contact me by email or visit my GitHub and Instagram.</p></div><div class="flex flex-wrap gap-3"><a href={`mailto:${profile.email}`} class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-violet-100">Email</a><a href={profile.github} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">GitHub</a><a href={profile.instagram} target="_blank" rel="noreferrer" class="pill px-5 py-3 text-sm text-zinc-200 hover:bg-white/10">Instagram</a></div></div></div><footer class="site-footer"><span>© {profile.year} {profile.name}</span></footer></section>
 </Layout>

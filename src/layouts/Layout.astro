@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import ThemeToggle from "../components/ThemeToggle";
+import LanguageSwitcher from "../components/LanguageSwitcher.astro";
 import { profile } from "../domain/profile";
 
 interface Props {
@@ -17,11 +18,8 @@ const {
   cv = false
 } = Astro.props;
 
-const path = Astro.url.pathname;
 const base = import.meta.env.BASE_URL;
 const prefix = `${base}${lang}`;
-const opposite = lang === "pt" ? `${base}en/` : `${base}pt/`;
-const oppositeLabel = lang === "pt" ? "EN" : "PT-BR";
 ---
 
 <!doctype html>
@@ -44,14 +42,15 @@ const oppositeLabel = lang === "pt" ? "EN" : "PT-BR";
           <nav class="glass flex items-center justify-between rounded-2xl px-4 py-3">
             <a href={prefix} class="font-semibold tracking-tight">SL<span class="text-violet-300">.</span></a>
             <div class="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
-              <a href={`${prefix}#about`} class="hover:text-white">Sobre</a>
-              <a href={`${prefix}#skills`} class="hover:text-white">Tecnologias</a>
-              <a href={`${prefix}#projects`} class="hover:text-white">Projetos</a>
-              <a href={`${prefix}#contact`} class="hover:text-white">Contato</a>
+              <a href={`${prefix}#about`} class="hover:text-white">{lang === "pt" ? "Sobre" : "About"}</a>
+              <a href={`${prefix}#skills`} class="hover:text-white">{lang === "pt" ? "Tecnologias" : "Technologies"}</a>
+              <a href={`${prefix}#projects`} class="hover:text-white">{lang === "pt" ? "Projetos" : "Projects"}</a>
+              <a href={`${prefix}#creative`} class="hover:text-white">{lang === "pt" ? "Interesses" : "Interests"}</a>
+              <a href={`${prefix}#contact`} class="hover:text-white">{lang === "pt" ? "Contato" : "Contact"}</a>
               <a href={`${prefix}/cv`} class="hover:text-white">CV</a>
             </div>
             <div class="flex items-center gap-2">
-              <a href={opposite} class="pill px-3 py-2 text-xs text-zinc-300 hover-soft">{oppositeLabel}</a>
+              <LanguageSwitcher lang={lang} />
               <ThemeToggle client:load />
             </div>
           </nav>
@@ -59,8 +58,6 @@ const oppositeLabel = lang === "pt" ? "EN" : "PT-BR";
       </header>
     )}
 
-    <main>
-      <slot />
-    </main>
+    <main><slot /></main>
   </body>
 </html>
