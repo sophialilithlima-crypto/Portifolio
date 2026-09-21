@@ -45,15 +45,13 @@ Para gerar a versão de produção:
 npm run build
 ```
 
-## GitHub Pages
+## Tecnologias usadas no próprio portfólio
 
-### Portfólio online
-
-**https://sophialilithlima-crypto.github.io/Portifolio/**
-
-Este é o endereço público do mesmo repositório `Portifolio`. Cada atualização enviada para a branch `main` deve ser refletida nessa página após a execução do GitHub Actions.
-
-O projeto utiliza GitHub Actions para gerar e publicar automaticamente a versão estática no GitHub Pages a cada push para a branch `main`.
+- Astro
+- React
+- Tailwind CSS
+- TypeScript
+- GitHub Pages
 
 ## Observação
 
