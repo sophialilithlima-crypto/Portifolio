@@ -70,8 +70,10 @@ import { bio, creative, profile, projects, skills, softSkills } from "../../doma
       </article>
 
       <article class="card creative-card p-6">
-        <div class="creative-placeholder"><div class="creative-placeholder-inner"><div class="creative-placeholder-icon" aria-hidden="true">✦</div><p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Imagem em breve</p><h3 class="mt-2 text-2xl font-semibold text-white">{creative.watercolor.title}</h3><p class="mt-3 leading-7 text-zinc-400">Esta área já está preparada para receber a foto dos seus trabalhos de desenho e aquarela.</p></div></div>
-        <div class="pt-6"><p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Expressão e criatividade</p><p class="mt-3 leading-7 text-zinc-400">{creative.watercolor.summary}</p><div class="achievement-tags mt-5">{creative.watercolor.tags.map((tag) => <span class="achievement-tag">{tag}</span>)}</div></div>
+        <div class="creative-artwork-frame">
+          <img src={`${import.meta.env.BASE_URL}images/desenho-1.png`} alt={creative.watercolor.images[0].alt} />
+        </div>
+        <div class="pt-6"><p class="text-xs font-semibold uppercase tracking-[.18em] text-violet-300">Expressão e criatividade</p><h3 class="mt-2 text-2xl font-semibold text-white">{creative.watercolor.title}</h3><p class="mt-3 leading-7 text-zinc-400">{creative.watercolor.summary}</p><div class="achievement-tags mt-5">{creative.watercolor.tags.map((tag) => <span class="achievement-tag">{tag}</span>)}</div></div>
       </article>
     </div>
   </section>

@@ -149,6 +149,29 @@ a { text-underline-offset: 4px; }
 
 /* Creative area */
 .creative-card { overflow: hidden; }
+.creative-artwork-frame {
+  position: relative;
+  min-height: 420px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(17,24,39,.04);
+}
+
+.creative-artwork-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+}
 .creative-image-wrap {
   position: relative;
   overflow: hidden;
@@ -325,6 +348,12 @@ html.light .creative-placeholder-icon {
   background: #f5f3ff;
   border-color: #ddd6fe;
   color: #6d28d9;
+}
+
+html.light .creative-artwork-frame {
+  background: #ffffff;
+  border-color: rgba(17,24,39,.14);
+  box-shadow: 0 14px 32px rgba(17,24,39,.06), inset 0 0 0 1px rgba(17,24,39,.03);
 }
 
 

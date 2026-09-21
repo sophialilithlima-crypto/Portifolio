@@ -137,7 +137,10 @@ export const creative = {
     title: "Desenho e aquarela",
     summary:
       "Desenho e pinto com aquarela há 5 anos. É uma prática que desenvolve minha criatividade, observação, paciência e atenção aos detalhes.",
-    tags: ["5 anos", "Desenho", "Aquarela"]
+    tags: ["5 anos", "Desenho", "Aquarela"],
+    images: [
+      { src: "/images/desenho-1.png", alt: "Desenho de Sophia em caderno de estudos" }
+    ]
   }
 };
 
