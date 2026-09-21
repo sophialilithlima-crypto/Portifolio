@@ -24,14 +24,6 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 - [Pokédex](https://github.com/sophialilithlima-crypto/Pokedex)
 - [Desafio React 3](https://github.com/sophialilithlima-crypto/desafio-react3)
 
-## GitHub Pages
-
-A versão publicada do portfólio fica em:
-
-**https://sophialilithlima-crypto.github.io/Portifolio/**
-
-O projeto utiliza GitHub Actions para gerar e publicar a versão estática no GitHub Pages a cada push para a branch `main`.
-
 ## Rodar localmente
 
 ```bash
@@ -45,13 +37,13 @@ Para gerar a versão de produção:
 npm run build
 ```
 
-## Tecnologias usadas no próprio portfólio
+## GitHub Pages
 
-- Astro
-- React
-- Tailwind CSS
-- TypeScript
-- GitHub Pages
+### Portfólio online
+
+**https://sophialilithlima-crypto.github.io/Portifolio/**
+
+
 
 ## Observação
 
