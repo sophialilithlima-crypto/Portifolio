@@ -26,11 +26,7 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 
 ## GitHub Pages
 
-A versão publicada do portfólio fica em:
-
 **https://sophialilithlima-crypto.github.io/Portifolio/**
-
-O projeto utiliza GitHub Actions para gerar e publicar a versão estática no GitHub Pages a cada push para a branch `main`.
 
 ## Rodar localmente
 
