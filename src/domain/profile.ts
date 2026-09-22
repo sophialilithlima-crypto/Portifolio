@@ -14,6 +14,7 @@ export type Tool = {
   color?: string;
   fallback?: string;
   invertDark?: boolean;
+  iconSrc?: string;
 };
 
 export const skills: Record<string, {
@@ -26,7 +27,7 @@ export const skills: Record<string, {
     accent: "skill-violet",
     items: [
       { name: "HTML5", logo: "html5", color: "E34F26" },
-      { name: "CSS3", logo: "css3", color: "1572B6" },
+      { name: "CSS3", iconSrc: "/images/logo-css3.svg" },
       { name: "JavaScript", logo: "javascript", color: "F7DF1E" },
       { name: "Python", logo: "python", color: "3776AB" },
       { name: "Go", logo: "go", color: "00ADD8" },

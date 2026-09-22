@@ -24,7 +24,9 @@ const { title, items, icon, accent } = Astro.props;
     {items.map((item) => (
       <div class="tool-card" title={item.name}>
         <div class="tool-logo-shell" aria-hidden="true">
-          {item.logo ? (
+          {item.iconSrc ? (
+            <img src={item.iconSrc} alt="" class="tool-local-logo" loading="lazy" />
+          ) : item.logo ? (
             <img
               src={`https://cdn.simpleicons.org/${item.logo}/${item.color ?? "7C3AED"}`}
               alt=""

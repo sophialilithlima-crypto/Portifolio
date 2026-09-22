@@ -23,7 +23,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={light ? "Ativar modo escuro" : "Ativar modo claro"}
-      className="pill px-3 py-2 text-sm text-zinc-300 transition hover:bg-white/10"
+      className="pill cursor-pointer px-3 py-2 text-sm text-zinc-300 transition hover:bg-white/10"
     >
       {light ? "☾" : "☀"}
     </button>
