@@ -122,7 +122,7 @@ export const projects = [
     learning:
       "Foi minha primeira experiência trabalhando com vários elementos de uma aplicação Full Stack no mesmo projeto. O principal aprendizado foi ganhar prática com frontend, backend, banco de dados, APIs e organização de uma aplicação completa.",
     technologies: ["React", "Vite", "Go", "Gin", "PostgreSQL", "Docker"],
-    github: "https://github.com/sophialilithlima-crypto/desafio-react3"
+    github: "https://github.com/sophialilithlima-crypto/desafio-react"
   }
 ];
 
