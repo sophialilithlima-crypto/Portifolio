@@ -16,7 +16,7 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 - Idiomas
 - Formação
 - Contato
-- CV em português e inglês
+- CV para impressão
 - Tema claro e escuro
 
 ## Projetos em destaque
