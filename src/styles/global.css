@@ -466,3 +466,89 @@ html.light .creative-placeholder-icon {
 html.light .language-switcher { cursor:pointer; }
 .language-switcher { cursor:pointer; }
 .language-switcher img { object-fit:cover; }
+
+/* Light theme refinement — dark theme remains unchanged */
+html.light #skills {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(124,58,237,.08), transparent 22rem),
+    radial-gradient(circle at 86% 72%, rgba(59,130,246,.06), transparent 24rem),
+    #eef0f4 !important;
+  border-color: #d8dbe2 !important;
+}
+
+html.light #skills .skill-group {
+  background: linear-gradient(145deg, #ffffff 0%, #faf9fe 58%, #f4f2fb 100%) !important;
+  border-color: #d2d5df !important;
+  box-shadow: 0 20px 44px rgba(31, 41, 55, .09), 0 2px 6px rgba(31, 41, 55, .04) !important;
+}
+
+html.light #skills .skill-group::after {
+  background: radial-gradient(circle, rgba(109,40,217,.12), transparent 68%);
+}
+
+html.light #skills .skill-icon {
+  border-color: rgba(79,70,229,.18) !important;
+  box-shadow: 0 8px 18px rgba(31,41,55,.08), inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+html.light #skills .skill-violet {
+  background: linear-gradient(135deg, #ddd6fe, #c4b5fd) !important;
+  color: #5b21b6 !important;
+}
+html.light #skills .skill-indigo {
+  background: linear-gradient(135deg, #c7d2fe, #a5b4fc) !important;
+  color: #3730a3 !important;
+}
+html.light #skills .skill-cyan {
+  background: linear-gradient(135deg, #bae6fd, #a5f3fc) !important;
+  color: #075985 !important;
+}
+html.light #skills .skill-emerald {
+  background: linear-gradient(135deg, #a7f3d0, #86efac) !important;
+  color: #047857 !important;
+}
+html.light #skills .skill-amber {
+  background: linear-gradient(135deg, #fde68a, #fcd34d) !important;
+  color: #92400e !important;
+}
+
+html.light #skills .tool-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f7f7fa 100%) !important;
+  border-color: #d6d9e2 !important;
+  color: #263143 !important;
+  box-shadow: 0 10px 22px rgba(31,41,55,.07) !important;
+}
+
+html.light #skills .tool-card:hover {
+  background: linear-gradient(145deg, #ffffff 0%, #f1edff 100%) !important;
+  border-color: #b8a8ef !important;
+  box-shadow: 0 14px 28px rgba(76,29,149,.12) !important;
+}
+
+html.light #skills .tool-logo-shell {
+  background: #ffffff !important;
+  border-color: #d7d9e1 !important;
+  box-shadow: 0 8px 18px rgba(31,41,55,.12), 0 1px 2px rgba(31,41,55,.06) !important;
+}
+
+html.light #skills .tool-logo-shell img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+html.light #skills .tool-logo-shell .logo-invert-dark {
+  filter: none !important;
+}
+
+html.light #skills .tool-card > span {
+  color: #263143 !important;
+  font-weight: 650;
+}
+
+html.light #skills .tool-card:hover > span {
+  color: #3b1a74 !important;
+}
+
+html.light #skills .algorithm-logo {
+  color: #6d28d9 !important;
+}
