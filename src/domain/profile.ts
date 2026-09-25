@@ -76,6 +76,10 @@ export const skills: Record<string, {
 
 export const softSkills = [
   {
+    title: "Uso de inteligência artificial",
+    description: "Utilizo ferramentas de IA como apoio aos estudos e projetos, trabalhando com elaboração de prompts, programação assistida, pesquisa e exploração de ideias."
+  },
+  {
     title: "Aprendizado contínuo",
     description: "Busco aprender novas tecnologias e transformar estudo em prática por meio de projetos."
   },

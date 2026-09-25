@@ -1,19 +1,99 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { profile, projects, skills } from "../../domain/profile";
+import { profile, projects, skills, softSkills } from "../../domain/profile";
 ---
 
 <Layout lang="pt" cv title={`CV — ${profile.name}`} description="Currículo de Sophia Lilith.">
   <div class="cv-page">
-    <div class="cv-actions no-print"><a href={`${import.meta.env.BASE_URL}pt/`}>← Voltar ao portfólio</a><button onclick="window.print()">Imprimir / salvar PDF</button></div>
-    <header class="cv-header"><div><p class="cv-kicker">Desenvolvedora em formação</p><h1>{profile.name}</h1><p class="cv-subtitle">Estudante do ensino médio • Interesse em desenvolvimento de jogos</p></div><img src={`${import.meta.env.BASE_URL}images/sophia.jpg`} alt="Foto de Sophia Lilith" /></header>
-    <div class="cv-contact"><span>{profile.email}</span><a href={profile.github}>{profile.github.replace("https://", "")}</a><span>Instagram: @Sophiaalilih</span></div>
-    <section class="cv-section"><h2>Perfil</h2><p>Sou Sophia Lilith, estudante do ensino médio e desenvolvedora em formação. Comecei a estudar programação no início de 2026 e venho desenvolvendo meus primeiros projetos para transformar o aprendizado em prática. Tenho interesse especial por desenvolvimento de jogos e também mantenho atividades criativas como ballet, desenho e aquarela.</p></section>
-    <section class="cv-section"><h2>Tecnologias e conhecimentos</h2><div class="cv-tech-grid">{Object.entries(skills).map(([group, data]) => <div><h3>{group}</h3><p>{data.items.map((item) => item.name).join(" • ")}</p></div>)}</div></section>
-    <section class="cv-section"><h2>Skills</h2><p>Aprendizado contínuo • Resolução de problemas • Criatividade • Disciplina • Atenção aos detalhes • Curiosidade</p></section>
-    <section class="cv-section"><h2>Projetos</h2><div class="cv-projects">{projects.map((project) => <article><div class="cv-project-head"><h3>{project.title}</h3><a href={project.github}>{project.github}</a></div><p>{project.description}</p><p><strong>Aprendizado:</strong> {project.learning}</p><small>{project.technologies.join(" • ")}</small></article>)}</div></section>
-    <section class="cv-two-col"><div class="cv-section"><h2>Formação</h2><p>Ensino médio — em andamento.</p></div><div class="cv-section"><h2>Idiomas</h2><p>Português — nativo<br />Inglês — intermediário</p></div></section>
-    <section class="cv-section"><h2>Além da tecnologia</h2><p>Ballet há 4 anos, atualmente no nível intermediário e com iniciação nas pontas. Também desenho e pinto com aquarela há 5 anos, desenvolvendo criatividade, observação, paciência e atenção aos detalhes.</p></section>
-    <section class="cv-section"><h2>Objetivo</h2><p>Continuar desenvolvendo conhecimentos em programação, explorar novas tecnologias e adquirir experiência por meio de projetos, com interesse especial em desenvolvimento de jogos e em continuar ampliando minhas habilidades criativas.</p></section>
+    <div class="cv-actions no-print">
+      <a href={`${import.meta.env.BASE_URL}pt/`}>← Voltar ao portfólio</a>
+      <button onclick="window.print()">Imprimir / salvar PDF</button>
+    </div>
+
+    <header class="cv-header">
+      <div class="cv-header-main">
+        <p class="cv-kicker">Desenvolvedora em formação</p>
+        <h1>{profile.name}</h1>
+        <p class="cv-subtitle">Estudante do ensino médio • Interesse em desenvolvimento de jogos</p>
+        <div class="cv-contact">
+          <span>{profile.email}</span>
+          <a href={profile.github}>github.com/sophialilithlima-crypto</a>
+          <a href={profile.instagram}>instagram.com/Sophiaalilih</a>
+        </div>
+      </div>
+      <img src={`${import.meta.env.BASE_URL}images/sophia.jpg`} alt="Foto de Sophia Lilith" />
+    </header>
+
+    <div class="cv-layout">
+      <main class="cv-main">
+        <section class="cv-section">
+          <h2>Perfil</h2>
+          <p>Sou Sophia Lilith, estudante do ensino médio e desenvolvedora em formação. Comecei a estudar programação no início de 2026 e venho desenvolvendo meus primeiros projetos para transformar o aprendizado em prática. Tenho interesse especial por desenvolvimento de jogos e também mantenho atividades criativas como ballet, desenho e aquarela.</p>
+        </section>
+
+        <section class="cv-section">
+          <h2>Projetos</h2>
+          <div class="cv-projects">
+            {projects.map((project) => (
+              <article class="cv-project">
+                <div class="cv-project-head">
+                  <h3>{project.title}</h3>
+                  <a href={project.github}>{project.github.replace("https://", "")}</a>
+                </div>
+                <p>{project.description}</p>
+                <p><strong>Aprendizado:</strong> {project.learning}</p>
+                <small>{project.technologies.join(" • ")}</small>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="cv-section">
+          <h2>Além da tecnologia</h2>
+          <div class="cv-creative-grid">
+            <div><h3>Ballet</h3><p>4 anos • nível intermediário • iniciação nas pontas.</p></div>
+            <div><h3>Desenho e aquarela</h3><p>5 anos • desenho e pintura em aquarela.</p></div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="cv-side">
+        <section class="cv-section cv-side-section">
+          <h2>Formação</h2>
+          <h3>Ensino médio</h3>
+          <p>Em andamento.</p>
+        </section>
+
+        <section class="cv-section cv-side-section">
+          <h2>Idiomas</h2>
+          <p><strong>Português</strong><br />Nativo</p>
+          <p><strong>Inglês</strong><br />Intermediário</p>
+        </section>
+
+        <section class="cv-section cv-side-section">
+          <h2>Skills</h2>
+          <ul class="cv-skill-list">
+            {softSkills.map((skill) => <li>{skill.title}</li>)}
+          </ul>
+        </section>
+
+        <section class="cv-section cv-side-section">
+          <h2>Tecnologias</h2>
+          <div class="cv-tech-grid">
+            {Object.entries(skills).map(([group, data]) => (
+              <div class="cv-tech-group">
+                <h3>{group}</h3>
+                <p>{data.items.map((item) => item.name).join(" • ")}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="cv-section cv-side-section">
+          <h2>Objetivo</h2>
+          <p>Continuar desenvolvendo conhecimentos em programação, explorar novas tecnologias e adquirir experiência por meio de projetos, com interesse especial em desenvolvimento de jogos.</p>
+        </section>
+      </aside>
+    </div>
   </div>
 </Layout>

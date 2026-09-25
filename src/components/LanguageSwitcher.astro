@@ -2,7 +2,7 @@
 interface Props { lang: "pt" | "en"; }
 const { lang } = Astro.props;
 const base = import.meta.env.BASE_URL;
-const currentFlag = lang === "pt" ? `${base}flag-br.svg` : `${base}flag-en.svg`;
+const currentFlag = lang === "pt" ? `${base}flag-br.svg` : `${base}images/flag-en-user.jpeg`;
 const currentLabel = lang === "pt" ? "PT-BR" : "EN";
 const target = lang === "pt" ? `${base}en/` : `${base}pt/`;
 const targetLabel = lang === "pt" ? "English" : "Português";
@@ -10,5 +10,4 @@ const targetLabel = lang === "pt" ? "English" : "Português";
 <a class="language-switcher pill" href={target} aria-label={`Mudar idioma para ${targetLabel}`}>
   <img src={currentFlag} alt="" />
   <span>{currentLabel}</span>
-  <span class="language-chevron" aria-hidden="true">↔</span>
 </a>

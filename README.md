@@ -12,6 +12,7 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 - Projetos de programação
 - Ballet, com galeria de fotos
 - Desenho e aquarela
+- Carrossel de trabalhos de desenho e aquarela
 - Idiomas
 - Formação
 - Contato
@@ -26,7 +27,11 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 
 ## GitHub Pages
 
-**https://sophialilithlima-crypto.github.io/Portifolio/**
+A versão publicada do portfólio fica em:
+
+**https://sophialilithlima-crypto.github.io/Portifolio/
+
+O projeto utiliza GitHub Actions para gerar e publicar a versão estática no GitHub Pages a cada push para a branch `main`.
 
 ## Rodar localmente
 
