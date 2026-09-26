@@ -69,7 +69,8 @@ export const skills: Record<string, {
       { name: "GitHub", logo: "github", color: "181717", invertDark: true },
       { name: "Docker", logo: "docker", color: "2496ED" },
       { name: "Docker Compose", logo: "docker", color: "2496ED" },
-      { name: "npm", logo: "npm", color: "CB3837" }
+      { name: "npm", logo: "npm", color: "CB3837" },
+      { name: "ChatGPT", iconSrc: "/images/chatgpt.svg" }
     ]
   }
 };

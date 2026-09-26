@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">ChatGPT</title>
+  <desc id="desc">Ícone estilizado para representar a ferramenta de inteligência artificial ChatGPT.</desc>
+  <rect x="1" y="1" width="46" height="46" rx="12" fill="#111827"/>
+  <path d="M24 9.5c3.4 0 6.2 2.3 7 5.5a7 7 0 0 1 6.1 10.4 7 7 0 0 1-6.1 10.4A7 7 0 0 1 18.8 41a7 7 0 0 1-7-10.4A7 7 0 0 1 18 20.2a7 7 0 0 1 6-10.7Z" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m18 20 6 3.5 6-3.5m-12 0v7l6 3.5 6-3.5v-7M24 23.5v7" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
