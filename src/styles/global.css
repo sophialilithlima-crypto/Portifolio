@@ -925,34 +925,82 @@ html.light #skills .algorithm-logo {
 }
 
 html.light .intro-animation {
-  border-bottom-color: rgba(17,24,39,.12);
+  border-bottom-color: rgba(17,24,39,.18);
   background:
-    radial-gradient(circle at 50% 42%, rgba(124,58,237,.12), transparent 18rem),
-    radial-gradient(circle at 18% 28%, rgba(79,70,229,.07), transparent 16rem),
-    radial-gradient(circle at 82% 70%, rgba(109,40,217,.06), transparent 19rem),
-    var(--bg);
+    radial-gradient(circle at 50% 34%, rgba(124,58,237,.18), transparent 22rem),
+    radial-gradient(circle at 12% 24%, rgba(79,70,229,.12), transparent 18rem),
+    radial-gradient(circle at 88% 72%, rgba(217,70,239,.09), transparent 20rem),
+    linear-gradient(180deg, #f6f2ff 0%, #eef2ff 52%, #f8fafc 100%);
+}
+
+html.light .intro-animation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.50), transparent 42%, rgba(109,40,217,.045)),
+    radial-gradient(circle at 50% 60%, transparent 0 15rem, rgba(79,70,229,.045) 30rem, transparent 45rem);
 }
 
 html.light .intro-grid {
+  opacity: .8;
   background-image:
-    linear-gradient(rgba(17,24,39,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17,24,39,.035) 1px, transparent 1px);
+    linear-gradient(rgba(17,24,39,.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,24,39,.075) 1px, transparent 1px);
 }
 
-html.light .intro-overline { color: #6d28d9; }
-html.light .intro-orbit { border-color: rgba(109,40,217,.18); }
-html.light .intro-orbit-two { border-color: rgba(79,70,229,.16); }
-html.light .intro-orbit::before,
-html.light .intro-orbit::after { box-shadow: 0 0 14px rgba(109,40,217,.3); }
-html.light .intro-stars span { background: rgba(109,40,217,.65); box-shadow: 0 0 8px rgba(109,40,217,.25); }
+html.light .intro-content {
+  text-shadow: 0 1px 0 rgba(255,255,255,.55);
+}
+
+html.light .intro-overline { color: #5b21b6; }
+html.light .intro-small-text { color: #374151; }
+html.light .intro-name span:first-child { color: #111827; }
+html.light .intro-name span:last-child {
+  background: linear-gradient(90deg, #4c1d95 0%, #6d28d9 58%, #4338ca 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+html.light .intro-message { color: #374151; }
+html.light .intro-story { color: #374151; }
 html.light .intro-story-track span {
-  background: linear-gradient(90deg, #18181b, #6d28d9 65%, #4c1d95);
+  background: linear-gradient(90deg, #111827, #5b21b6 62%, #4338ca);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 html.light .intro-story-window::after {
-  background: linear-gradient(90deg, rgba(109,40,217,.05), rgba(109,40,217,.3), rgba(109,40,217,.05));
+  background: linear-gradient(90deg, rgba(91,33,182,.08), rgba(91,33,182,.55), rgba(91,33,182,.08));
+}
+html.light .intro-scroll { color: #111827; }
+html.light .intro-scroll-icon {
+  border-color: rgba(17,24,39,.22);
+  color: #5b21b6;
+  background: rgba(255,255,255,.42);
+}
+html.light .intro-scroll:hover .intro-scroll-icon {
+  border-color: rgba(91,33,182,.42);
+  background: rgba(109,40,217,.10);
+}
+html.light .intro-accent {
+  background: linear-gradient(90deg, transparent, rgba(91,33,182,.75), transparent);
+}
+html.light .intro-orbit { border-color: rgba(91,33,182,.28); }
+html.light .intro-orbit-two { border-color: rgba(67,56,202,.22); }
+html.light .intro-orbit::before,
+html.light .intro-orbit::after {
+  box-shadow: 0 0 16px rgba(91,33,182,.45);
+}
+html.light .intro-orbit::before { background: #7c3aed; }
+html.light .intro-orbit::after { background: #4338ca; }
+html.light .intro-glow { opacity: .52; }
+html.light .intro-glow-one { background: rgba(124,58,237,.18); }
+html.light .intro-glow-two { background: rgba(79,70,229,.15); }
+html.light .intro-stars span {
+  background: rgba(91,33,182,.78);
+  box-shadow: 0 0 10px rgba(91,33,182,.42);
 }
 
 @media (max-width: 700px) {

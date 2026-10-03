@@ -7,7 +7,7 @@ const { lang = "pt" } = Astro.props;
 const isPt = lang === "pt";
 ---
 
-<section class="intro-animation" aria-label={isPt ? "Introdução animada" : "Animated introduction"}>
+<section id="intro" class="intro-animation" aria-label={isPt ? "Introdução animada" : "Animated introduction"}>
   <div class="intro-orbit intro-orbit-one" aria-hidden="true"></div>
   <div class="intro-orbit intro-orbit-two" aria-hidden="true"></div>
   <div class="intro-glow intro-glow-one" aria-hidden="true"></div>
