@@ -7,7 +7,7 @@ const { lang = "pt" } = Astro.props;
 const isPt = lang === "pt";
 ---
 
-<section class="intro-animation" aria-label={isPt ? "Introdução animada" : "Animated introduction"}>
+<section id="intro" class="intro-animation" aria-label={isPt ? "Introdução animada" : "Animated introduction"}>
   <div class="intro-orbit intro-orbit-one" aria-hidden="true"></div>
   <div class="intro-orbit intro-orbit-two" aria-hidden="true"></div>
   <div class="intro-glow intro-glow-one" aria-hidden="true"></div>
@@ -39,6 +39,20 @@ const isPt = lang === "pt";
         ? "Um espaço para programação, arte, movimento e tudo o que estou aprendendo no caminho."
         : "A space for programming, art, movement and everything I'm learning along the way."}
     </p>
+
+    <div class="intro-story" aria-label={isPt ? "Resumo do portfólio" : "Portfolio summary"}>
+      <span class="intro-story-lead">{isPt ? "Este portfólio reúne" : "This portfolio brings together"}</span>
+      <span class="intro-story-window">
+        <span class="intro-story-track">
+          <span>{isPt ? "programação e tecnologia" : "programming and technology"}</span>
+          <span>{isPt ? "projetos e aprendizado" : "projects and learning"}</span>
+          <span>{isPt ? "ballet e expressão" : "ballet and expression"}</span>
+          <span>{isPt ? "desenho e aquarela" : "drawing and watercolor"}</span>
+          <span>{isPt ? "criatividade e evolução" : "creativity and growth"}</span>
+          <span aria-hidden="true">{isPt ? "programação e tecnologia" : "programming and technology"}</span>
+        </span>
+      </span>
+    </div>
 
     <a class="intro-scroll" href="#about">
       <span>{isPt ? "explorar" : "explore"}</span>
