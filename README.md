@@ -16,10 +16,11 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 - Idiomas
 - Formação
 - Contato
-- CV para impressão
+- CV em português e inglês
 - Tema claro e escuro
+- Versão responsiva
 
-## Projetos em destaque
+## Projetos
 
 - [Pokédex](https://github.com/sophialilithlima-crypto/Pokedex)
 - [Desafio React 3](https://github.com/sophialilithlima-crypto/desafio-react)
@@ -28,7 +29,9 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 
 A versão publicada do portfólio fica em:
 
-https://sophialilithlima-crypto.github.io/Portifolio/
+**https://sophialilithlima-crypto.github.io/Portifolio/
+
+O projeto utiliza GitHub Actions para gerar e publicar a versão estática no GitHub Pages a cada push para a branch `main`.
 
 ## Rodar localmente
 

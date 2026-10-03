@@ -1,0 +1,48 @@
+---
+interface Props {
+  lang?: "pt" | "en";
+}
+
+const { lang = "pt" } = Astro.props;
+const isPt = lang === "pt";
+---
+
+<section class="intro-animation" aria-label={isPt ? "Introdução animada" : "Animated introduction"}>
+  <div class="intro-orbit intro-orbit-one" aria-hidden="true"></div>
+  <div class="intro-orbit intro-orbit-two" aria-hidden="true"></div>
+  <div class="intro-glow intro-glow-one" aria-hidden="true"></div>
+  <div class="intro-glow intro-glow-two" aria-hidden="true"></div>
+
+  <div class="intro-grid" aria-hidden="true"></div>
+  <div class="intro-stars" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="intro-content">
+    <div class="intro-overline">
+      <span class="intro-line"></span>
+      <span>{isPt ? "PORTFÓLIO · 2026" : "PORTFOLIO · 2026"}</span>
+      <span class="intro-line"></span>
+    </div>
+
+    <div class="intro-name-wrap">
+      <p class="intro-small-text">{isPt ? "criatividade + tecnologia" : "creativity + technology"}</p>
+      <h2 class="intro-name" aria-label="Sophia Lilith">
+        <span>SOPHIA</span>
+        <span>LILITH</span>
+      </h2>
+      <div class="intro-accent" aria-hidden="true"></div>
+    </div>
+
+    <p class="intro-message">
+      {isPt
+        ? "Um espaço para programação, arte, movimento e tudo o que estou aprendendo no caminho."
+        : "A space for programming, art, movement and everything I'm learning along the way."}
+    </p>
+
+    <a class="intro-scroll" href="#about">
+      <span>{isPt ? "explorar" : "explore"}</span>
+      <span class="intro-scroll-icon" aria-hidden="true">↓</span>
+    </a>
+  </div>
+</section>

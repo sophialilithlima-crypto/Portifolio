@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import IntroAnimation from "../../components/IntroAnimation.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import SkillGroup from "../../components/SkillGroup.astro";
 import ImageCarousel from "../../components/ImageCarousel.astro";
@@ -7,6 +8,7 @@ import { bio, creative, profile, projects, skills, softSkills } from "../../doma
 ---
 
 <Layout lang="pt">
+  <IntroAnimation lang="pt" />
   <div class="grid-bg">
     <section class="container-page flex min-h-screen items-center pt-28 pb-20">
       <div class="grid w-full gap-12 lg:grid-cols-[1.25fr_.75fr] lg:items-center">
