@@ -19,7 +19,7 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
-const prefix = `${base}${lang}`;
+const prefix = `${base}${lang}/`;
 ---
 
 <!doctype html>
@@ -47,7 +47,7 @@ const prefix = `${base}${lang}`;
               <a href={`${prefix}#projects`} class="hover:text-white">{lang === "pt" ? "Projetos" : "Projects"}</a>
               <a href={`${prefix}#creative`} class="hover:text-white">{lang === "pt" ? "Interesses" : "Interests"}</a>
               <a href={`${prefix}#contact`} class="hover:text-white">{lang === "pt" ? "Contato" : "Contact"}</a>
-              <a href={`${prefix}/cv`} class="hover:text-white">CV</a>
+              <a href={`${prefix}cv`} class="hover:text-white">CV</a>
             </div>
             <div class="flex items-center gap-2">
               <LanguageSwitcher lang={lang} />
