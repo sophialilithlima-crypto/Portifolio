@@ -20,7 +20,7 @@ O projeto foi inspirado na organização do portfólio de referência fornecido 
 - Tema claro e escuro
 - Versão responsiva
 
-## Projetos
+## Projetos em destaque
 
 - [Pokédex](https://github.com/sophialilithlima-crypto/Pokedex)
 - [Desafio React 3](https://github.com/sophialilithlima-crypto/desafio-react)
