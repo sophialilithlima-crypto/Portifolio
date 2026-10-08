@@ -678,9 +678,10 @@ html.light #skills .algorithm-logo {
   width: min(920px, 100%);
   margin: 2rem auto 0;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
-  gap: .45rem;
+  flex-wrap: wrap;
+  gap: .35rem;
   text-align: center;
   color: var(--muted);
   font-size: clamp(.8rem, 1.7vw, 1rem);
@@ -691,21 +692,25 @@ html.light #skills .algorithm-logo {
 .intro-story-lead {
   letter-spacing: .01em;
   color: inherit;
+  white-space: nowrap;
 }
 
 .intro-story-window {
   position: relative;
   display: inline-block;
-  min-width: min(430px, 66vw);
+  width: max-content;
+  min-width: 0;
+  max-width: 100%;
   height: 1.45em;
   overflow: hidden;
-  vertical-align: middle;
-  text-align: center;
+  vertical-align: bottom;
+  text-align: left;
   color: inherit;
 }
 
 .intro-story-track {
   display: flex;
+  width: max-content;
   flex-direction: column;
   gap: 0;
   animation: intro-story-loop 12s cubic-bezier(.76,0,.24,1) infinite;
@@ -715,7 +720,7 @@ html.light #skills .algorithm-logo {
   display: block;
   height: 1.45em;
   white-space: nowrap;
-  text-align: center;
+  text-align: left;
   font-weight: 400;
   color: inherit;
 }
@@ -958,7 +963,13 @@ html.light .intro-name span:last-child {
 }
 html.light .intro-message { color: #374151; }
 html.light .intro-story { color: #374151; }
-html.light .intro-story-track span { color: inherit; }
+html.light .intro-story-lead,
+html.light .intro-story-track span {
+  color: inherit;
+}
+html.light .intro-story-window::after {
+  display: none;
+}
 html.light .intro-scroll { color: #111827; }
 html.light .intro-scroll-icon {
   border-color: rgba(17,24,39,.22);
@@ -996,14 +1007,15 @@ html.light .intro-stars span {
   .intro-orbit-two { width: 76vw; height: 29vw; }
   .intro-story {
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
-    gap: .4rem;
-    font-size: clamp(.72rem, 3.2vw, .92rem);
+    gap: .25rem;
   }
   .intro-story-window {
-    min-width: min(260px, 62vw);
-    text-align: center;
+    width: max-content;
+    min-width: 0;
+    max-width: 100%;
+    text-align: left;
   }
   .intro-glow-one { left: 3%; top: 18%; }
   .intro-glow-two { right: 2%; bottom: 13%; }
